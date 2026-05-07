@@ -3,55 +3,181 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TeleClaw</title>
-  <style>
-    body {
-      margin: 0;
-      min-height: 100vh;
-      background: radial-gradient(circle at top, #122033, #050608 70%);
-      color: white;
-      font-family: Arial, sans-serif;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 24px;
-    }
-    .card {
-      max-width: 520px;
-      padding: 32px;
-      border-radius: 28px;
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.12);
-      box-shadow: 0 0 40px rgba(0,200,255,0.18);
-    }
-    h1 {
-      font-size: 42px;
-      margin: 0;
-    }
-    .red {
-      color: #ff2b2b;
-    }
-    p {
-      color: #cbd5e1;
-      font-size: 17px;
-      line-height: 1.6;
-    }
-    .badge {
-      margin-top: 20px;
-      display: inline-block;
-      padding: 12px 18px;
-      border-radius: 999px;
-      background: linear-gradient(90deg, #ff2b2b, #00d5ff);
-      font-weight: bold;
-    }
-  </style>
+  <title>TeleClaw — AI Workspace for Builders</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="card">
-    <h1>TELE<span class="red">CLAW</span></h1>
-    <p>AI workspace for builders. Create agents, Android apps, workflows, automation systems, and developer tools from one intelligent assistant.</p>
-    <div class="badge">Code • Build • Automate • Deploy</div>
+  <div id="loader">
+    <div class="loader-core"></div>
+    <p>Initializing TeleClaw Workspace...</p>
   </div>
+
+  <div class="noise"></div>
+  <div class="bg-grid"></div>
+  <div class="orb orb-red"></div>
+  <div class="orb orb-cyan"></div>
+
+  <header class="nav">
+    <div class="brand">
+      <span class="prompt-icon">&gt;_</span>
+      <span>TELE<span>CLAW</span></span>
+    </div>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#terminal">Terminal</a>
+      <a href="#roadmap">Roadmap</a>
+    </nav>
+    <button class="nav-btn">Launch Workspace</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content glass reveal">
+        <div class="eyebrow">AI Workspace • Agents • Android • Automation</div>
+        <h1>Build agents, Android apps, workflows, and automations from one intelligent workspace.</h1>
+        <p>
+          TeleClaw is a futuristic AI operating layer for builders who want to code, build,
+          automate, and deploy faster with multi-agent intelligence.
+        </p>
+        <div class="hero-actions">
+          <button class="primary-btn">Launch Workspace</button>
+          <button class="secondary-btn">View Roadmap</button>
+        </div>
+      </div>
+
+      <div class="robot-stage reveal">
+        <div class="robot-glow"></div>
+        <div class="robot">
+          <div class="antenna left"></div>
+          <div class="antenna right"></div>
+          <div class="head">
+            <div class="eye left-eye"></div>
+            <div class="eye right-eye"></div>
+          </div>
+          <div class="body">
+            <span>&gt;_</span>
+          </div>
+        </div>
+
+        <div class="hud-card hud-1">AGENTS<br><strong>12 Active</strong></div>
+        <div class="hud-card hud-2">ANDROID<br><strong>Build Ready</strong></div>
+        <div class="hud-card hud-3">WORKFLOW<br><strong>Running</strong></div>
+      </div>
+    </section>
+
+    <section id="terminal" class="section grid-two">
+      <div class="terminal glass reveal">
+        <div class="window-bar">
+          <span></span><span></span><span></span>
+          <p>teleclaw-terminal</p>
+        </div>
+        <pre id="terminalOutput"></pre>
+        <span class="cursor"></span>
+      </div>
+
+      <div class="chat glass reveal">
+        <h2>AI Chat Preview</h2>
+        <div class="bubble user">Build me a premium Notes app for Android.</div>
+        <div class="bubble bot">Creating architecture, Compose UI, Room storage, and GitHub Actions APK workflow.</div>
+        <div class="bubble user">Make it production ready.</div>
+        <div class="bubble bot">Confirmed. Adding folders, search, pinning, favorites, dark theme, and polished Material 3 UI.</div>
+      </div>
+    </section>
+
+    <section id="features" class="section">
+      <div class="section-head reveal">
+        <p class="eyebrow">Future Workspace Modules</p>
+        <h2>Designed for serious builders</h2>
+      </div>
+
+      <div class="features">
+        <article class="feature-card reveal">
+          <span>🤖</span>
+          <h3>AI Agents</h3>
+          <p>Create specialized agents for coding, debugging, research, automation, and deployment.</p>
+        </article>
+
+        <article class="feature-card reveal">
+          <span>⚙️</span>
+          <h3>Workflow Builder</h3>
+          <p>Design multi-step automations and connect AI tasks into powerful execution pipelines.</p>
+        </article>
+
+        <article class="feature-card reveal">
+          <span>📱</span>
+          <h3>Android Builder</h3>
+          <p>Generate Android apps, Gradle workflows, APK build scripts, and production-ready UI systems.</p>
+        </article>
+
+        <article class="feature-card reveal">
+          <span>🚀</span>
+          <h3>Deploy Systems</h3>
+          <p>Prepare GitHub Actions, backend services, web apps, and cloud deployment workflows.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section dashboard glass reveal">
+      <div>
+        <p class="eyebrow">Live Workspace Preview</p>
+        <h2>System Activity</h2>
+      </div>
+
+      <div class="panel-grid">
+        <div class="status-panel">
+          <span class="status-dot"></span>
+          <p>AI Engine</p>
+          <strong id="engineStatus">Online</strong>
+        </div>
+        <div class="status-panel">
+          <span class="status-dot orange"></span>
+          <p>Build Queue</p>
+          <strong id="buildQueue">3 Tasks</strong>
+        </div>
+        <div class="status-panel">
+          <span class="status-dot green"></span>
+          <p>Agents</p>
+          <strong id="agentCount">12 Active</strong>
+        </div>
+      </div>
+    </section>
+
+    <section id="roadmap" class="section">
+      <div class="section-head reveal">
+        <p class="eyebrow">Platform Roadmap</p>
+        <h2>From landing page to AI operating system</h2>
+      </div>
+
+      <div class="roadmap">
+        <div class="road-card reveal">
+          <span>01</span>
+          <h3>Better UI</h3>
+          <p>Cyberpunk interface, glassmorphism, terminal effects, animations, and responsive layouts.</p>
+        </div>
+        <div class="road-card reveal">
+          <span>02</span>
+          <h3>Telegram Mini App</h3>
+          <p>Chat interface, dashboard, workflow builder, agent cards, and project manager.</p>
+        </div>
+        <div class="road-card reveal">
+          <span>03</span>
+          <h3>AI Backend</h3>
+          <p>OpenRouter, OpenAI, Ollama, NVIDIA NIM, and local AI model integrations.</p>
+        </div>
+        <div class="road-card reveal">
+          <span>04</span>
+          <h3>Real Workspace</h3>
+          <p>AI OS, Android development assistant, multi-agent platform, and automation SaaS.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <strong>TELE<span>CLAW</span></strong>
+    <p>Code • Build • Automate • Deploy</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
